@@ -1,0 +1,53 @@
+body {
+    background-color: lightblue;
+    color: black;
+    font-weight: 500px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px white;
+}
+
+.title {
+    font-size: 64px;
+    text-align: center;
+    font-weight: 700px;
+}
+#game-area {
+    display: flex;
+    justify-content: space-around;
+}
+#settings-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: solid black 2px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom right, lightblue, white);
+    height: 600px;
+    width: 300px;
+}
+#color-container,
+#clear-input,
+#grid-size-container {
+    margin-left: 16px;
+}
+input[type="color"] {
+    cursor: pointer;
+    border: none;
+    border-color: transparent;
+    padding: 0;
+    appearance: none;
+    background-color: transparent;
+    
+}
+input[type="color" i]::-webkit-color-swatch {
+    border: none;
+    border-radius: 5px;
+}
+
+#grid-container {
+    height: 600px;
+    border: solid black 2px;
+    width: 600px;
+    border-radius: 4px;
+}
