@@ -1,5 +1,5 @@
 const container = document.querySelector('#grid-container');
-
+let color = 'black'
 
 const createGrid = document.querySelectorAll('input[name="grid"]').forEach((item) => {
     item.addEventListener('change', function(e) {
@@ -7,6 +7,15 @@ const createGrid = document.querySelectorAll('input[name="grid"]').forEach((item
         return number;
     })
 });
+
+const gridColor = document.querySelector('#colorpicker');
+gridColor.addEventListener('input', chosenColor)
+
+function chosenColor(e) {
+    color = e.target.value;
+    return color;
+}
+
 
 const createButton = document.querySelector('#create-grid');
 createButton.addEventListener('click', genGrid);
@@ -29,9 +38,20 @@ function genGrid(x) {
         rows.appendChild(columns);
        }
     }
+    onLoadGrid()
 }
 
 function clearInput() {
     createButton.addEventListener('click', genGrid);
     document.querySelectorAll(".boxes").forEach((e) => e.parentNode.removeChild(e));
+}
+
+function colorGrid() {
+    this.style.backgroundColor = `${color}`
+}
+
+
+function onLoadGrid() {
+    let boxes = document.querySelectorAll('.boxes');
+    boxes.forEach(box => box.addEventListener('mouseover', colorGrid));
 }
