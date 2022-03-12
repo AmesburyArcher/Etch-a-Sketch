@@ -11,8 +11,26 @@ body {
     font-size: 64px;
     text-align: center;
     font-weight: 700px;
+    overflow: hidden;
+    border-right: .15 solid black;
+    white-space: nowrap;
+    margin: 50px auto;
+    letter-spacing: .15em;
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
 }
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+   
 #game-area {
+    margin-top: 50px;
     display: flex;
     justify-content: space-around;
 }
@@ -31,6 +49,11 @@ body {
 #grid-size-container {
     margin-left: 16px;
 }
+#grid-size-container {
+    display: flex;
+    flex-direction:column;
+    gap: 0.5em;
+}
 input[type="color"] {
     cursor: pointer;
     border: none;
@@ -38,7 +61,6 @@ input[type="color"] {
     padding: 0;
     appearance: none;
     background-color: transparent;
-    
 }
 input[type="color" i]::-webkit-color-swatch {
     border: none;
@@ -50,4 +72,14 @@ input[type="color" i]::-webkit-color-swatch {
     border: solid black 2px;
     width: 600px;
     border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(1fr);
+}
+
+.columns {
+    border: solid black 1px;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(1fr);
 }
