@@ -46,8 +46,25 @@ body {
 }
 #color-container,
 #clear-input,
-#grid-size-container {
+#grid-size-container,
+#create-grid {
     margin-left: 16px;
+}
+
+#create-grid {
+    cursor: pointer;
+}
+
+#create-grid:hover {
+    transform: scale(1.05);
+}
+
+#clear-input {
+    cursor: pointer;
+}
+
+#clear-input:hover {
+    transform: scale(1.05);
 }
 #grid-size-container {
     display: flex;
