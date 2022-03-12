@@ -5,6 +5,7 @@ body {
     font-family: 'Fjalla One', sans-serif;
     font-size: 20px;
     text-shadow: 3px 3px 3px white;
+    height: 100vh;
 }
 
 .title {
@@ -83,7 +84,7 @@ input[type="color" i]::-webkit-color-swatch {
     border: none;
     border-radius: 5px;
 }
-/* this is all messed up need to fix below */
+
 #grid-container {
     height: 600px;
     border: solid black 2px;
@@ -95,6 +96,17 @@ input[type="color" i]::-webkit-color-swatch {
 
 .boxes {
     display: inline-block;
-    border: solid black 1px;
+    border: solid black 1px; 
     box-sizing: border-box;
+}
+
+#footer {
+    text-align: center;
+    margin-top: 600px;
+    border: solid black 2px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5)
+}
+.footer-text {
+    margin: 0.5em;
 }
