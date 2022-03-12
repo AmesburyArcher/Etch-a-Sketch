@@ -66,20 +66,19 @@ input[type="color" i]::-webkit-color-swatch {
     border: none;
     border-radius: 5px;
 }
-
+/* this is all messed up need to fix below */
 #grid-container {
     height: 600px;
     border: solid black 2px;
     width: 600px;
     border-radius: 4px;
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-template-rows: repeat(1fr);
+    font-size: 0;
+    white-space: nowrap;
 }
 
-.columns {
+.boxes {
+    display: inline-block;
     border: solid black 1px;
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-template-rows: repeat(1fr);
+    box-sizing: border-box;
 }
+

@@ -8,10 +8,12 @@ function genGrid(x) {
         container.appendChild(rows);
        for(let z = 0; z < x; z++) {
         const columns = document.createElement('div');
-        columns.classList.add('columns');
-           rows.appendChild(columns);
+        columns.classList.add('boxes');
+        columns.style.width = `${600 / x}px`;
+        columns.style.height = `${600 / x}px`;
+        rows.appendChild(columns);
        }
     }
 }
 
-genGrid(6);
+genGrid(16);
