@@ -48,8 +48,29 @@ body {
 #color-container,
 #clear-input,
 #grid-size-container,
-#create-grid {
+#create-grid,
+#rainbow-container {
     margin-left: 16px;
+}
+
+#rainbow-container {
+    display: flex;
+    gap: 0.5em;
+}
+
+#rainbow {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    font-weight: 500px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px white;
+    cursor: pointer;
+}
+
+#rainbow:hover {
+    transform: scale(1.05);
 }
 
 #create-grid {

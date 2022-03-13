@@ -60,3 +60,15 @@ function onLoadGrid() {
     let boxes = document.querySelectorAll('.boxes');
     boxes.forEach(box => box.addEventListener('mouseover', colorGrid));
 }
+
+
+const toggle = document.querySelector('#rainbow');
+toggle.addEventListener('click', function rainbowToggle(e) {
+    if(e.target.value == 'On') {
+        e.target.value = 'Off';
+    } else if(e.target.value == 'Off') {
+        e.target.value = 'On';
+    }
+})
+
+
