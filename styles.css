@@ -53,12 +53,14 @@ body {
     margin-left: 16px;
 }
 
-#rainbow-container {
+#rainbow-container,
+#color-mode-container {
     display: flex;
     gap: 0.5em;
 }
 
-#rainbow {
+#rainbow,
+#color-mode {
     background: none!important;
     border: none;
     padding: 0!important;
@@ -69,7 +71,8 @@ body {
     cursor: pointer;
 }
 
-#rainbow:hover {
+#rainbow:hover,
+#color-mode:hover {
     transform: scale(1.05);
 }
 

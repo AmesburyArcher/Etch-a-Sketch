@@ -1,5 +1,6 @@
 const container = document.querySelector('#grid-container');
-let color = 'black'
+let color = 'black';
+let colorChoice = 'black';
 
 //this function takes in the input from the grid size selection
 const createGrid = document.querySelectorAll('input[name="grid"]').forEach((item) => {
@@ -10,20 +11,32 @@ const createGrid = document.querySelectorAll('input[name="grid"]').forEach((item
 });
 
 const gridColor = document.querySelector('#colorpicker');
-gridColor.addEventListener('input', chosenColor);
+gridColor.addEventListener('input', (e) => {
+    colorChoice = e.target.value;
+    chosenColor();
+});
 
 
 
 //this function takes in the input from the select a color
-function chosenColor(e) {
-    if(toggle.value == 'Off') {
-        color = e.target.value;
+function chosenColor() {
+    if(toggle.value == 'Off' && colorToggle.value == 'On') {
+        color = colorChoice;
+        console.log('color');
         return color;
-    } else if (toggle.value == 'On') {
+        }
+    else if (toggle.value == 'On' && colorToggle.value == 'Off') {
         color = 'yellow';
+        console.log('rainbow');
+        return color;
+    } 
+    else if (toggle.value == 'Off' && colorToggle.value == 'Off') {
+        color = 'black';
+        console.log('default')
         return color;
     }
 }
+
 
 
 const createButton = document.querySelector('#create-grid');
@@ -75,6 +88,18 @@ toggle.addEventListener('click', function rainbowToggle(e) {
         e.target.value = 'Off';
     } else if(e.target.value == 'Off') {
         e.target.value = 'On';
+        colorToggle.value = 'Off';
+    }
+    chosenColor();
+})
+
+const colorToggle = document.querySelector('#color-mode');
+colorToggle.addEventListener('click', function colorToggle(e) {
+    if(e.target.value == 'On') {
+        e.target.value = 'Off';
+    } else if(e.target.value == 'Off') {
+        e.target.value = 'On';
+        toggle.value = 'Off';
     }
     chosenColor();
 })
