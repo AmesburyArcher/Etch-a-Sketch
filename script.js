@@ -10,12 +10,19 @@ const createGrid = document.querySelectorAll('input[name="grid"]').forEach((item
 });
 
 const gridColor = document.querySelector('#colorpicker');
-gridColor.addEventListener('input', chosenColor)
+gridColor.addEventListener('input', chosenColor);
+
+
 
 //this function takes in the input from the select a color
 function chosenColor(e) {
-    color = e.target.value;
-    return color;
+    if(toggle.value == 'Off') {
+        color = e.target.value;
+        return color;
+    } else if (toggle.value == 'On') {
+        color = 'yellow';
+        return color;
+    }
 }
 
 
@@ -69,6 +76,7 @@ toggle.addEventListener('click', function rainbowToggle(e) {
     } else if(e.target.value == 'Off') {
         e.target.value = 'On';
     }
+    chosenColor();
 })
 
 
