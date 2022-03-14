@@ -49,18 +49,21 @@ body {
 #clear-input,
 #grid-size-container,
 #create-grid,
-#rainbow-container {
+#rainbow-container,
+#grid-lines-container {
     margin-left: 16px;
 }
 
 #rainbow-container,
-#color-mode-container {
+#color-mode-container,
+#grid-lines-container {
     display: flex;
     gap: 0.5em;
 }
 
 #rainbow,
-#color-mode {
+#color-mode,
+#grid-lines {
     background: none!important;
     border: none;
     padding: 0!important;
@@ -71,9 +74,16 @@ body {
     cursor: pointer;
 }
 
-#rainbow:hover,
 #color-mode:hover {
     transform: scale(1.05);
+}
+
+#rainbow:hover {
+    transform: scale(1.05);
+}
+
+#grid-lines:hover {
+    transform:scale(1.05);
 }
 
 #create-grid {

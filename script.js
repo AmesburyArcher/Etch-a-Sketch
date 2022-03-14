@@ -103,4 +103,19 @@ colorToggle.addEventListener('click', function colorToggle(e) {
     chosenColor();
 })
 
+const gridLines = document.querySelector('#grid-lines');
+gridLines.addEventListener('click', function gridToggle(e) {
+    if(e.target.value == 'On') {
+        e.target.value = 'Off';
+        document.querySelectorAll('.boxes').forEach((box) => {
+            box.style.border = 'none';
+        } )
+    } else if(e.target.value == 'Off') {
+        e.target.value = 'On';
+        document.querySelectorAll('.boxes').forEach((box) => {
+            box.style.border = 'solid black 1px';
+        } )
+    }
+})
+
 
