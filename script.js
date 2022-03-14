@@ -66,6 +66,8 @@ function genGrid(x) {
 function clearInput() {
     createButton.addEventListener('click', genGrid);
     document.querySelectorAll(".boxes").forEach((e) => e.parentNode.removeChild(e));
+
+    if(gridLines.value == "Off") gridLines.value = 'On'; 
 }
 
 //this function colours the grid
