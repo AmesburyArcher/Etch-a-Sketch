@@ -117,5 +117,3 @@ gridLines.addEventListener('click', function gridToggle(e) {
         } )
     }
 })
-
-
