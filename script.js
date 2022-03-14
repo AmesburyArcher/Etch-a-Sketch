@@ -22,17 +22,15 @@ gridColor.addEventListener('input', (e) => {
 function chosenColor() {
     if(toggle.value == 'Off' && colorToggle.value == 'On') {
         color = colorChoice;
-        console.log('color');
         return color;
         }
     else if (toggle.value == 'On' && colorToggle.value == 'Off') {
-        color = 'yellow';
-        console.log('rainbow');
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        color = '#' + randomColor;
         return color;
     } 
     else if (toggle.value == 'Off' && colorToggle.value == 'Off') {
         color = 'black';
-        console.log('default')
         return color;
     }
 }
@@ -72,7 +70,8 @@ function clearInput() {
 
 //this function colours the grid
 function colorGrid() {
-    this.style.backgroundColor = `${color}`
+    this.style.backgroundColor = `${color}`;
+    chosenColor();
 }
 
 //this function creates an eventlistener for the generated boxes/divs
